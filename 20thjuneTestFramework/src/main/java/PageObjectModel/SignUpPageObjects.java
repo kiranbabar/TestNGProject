@@ -1,0 +1,63 @@
+package PageObjectModel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class SignUpPageObjects {
+
+	public WebDriver driver;
+
+	private By Firstname=By.xpath("//input[@name='UserFirstName']");
+	private By Lastname=By.xpath("//input[@name='UserLastName']");
+	private By WorkEmail=By.xpath("//input[@type='email']");
+	private By Company=By.xpath("//input[@name='CompanyName']");
+	private By Phone=By.xpath("//input[@type='tel']");
+    private By JobTitle=By.xpath("//select[@name='UserTitle']");
+    private By Employees=By.xpath("//select[@name='CompanyEmployees']");
+    private By Country=By.xpath("//select[@name='CompanyCountry']");
+
+    public SignUpPageObjects(WebDriver driver2) {
+		this.driver=driver2;
+	}
+
+	public WebElement EnterFirstname() {
+    	return driver.findElement(Firstname);
+    }
+
+    public WebElement EnterLastname() {
+    	return driver.findElement(Lastname);
+    }
+
+    public WebElement EnterWorkEmail() {
+    	return driver.findElement(WorkEmail);
+    }
+
+
+    public WebElement EnterCompany() {
+    	return driver.findElement(Company);
+    }
+
+    public WebElement EnterPhone() {
+    	return driver.findElement(Phone);
+    }
+
+   public WebElement selectJobTitle() {
+    	return driver.findElement(JobTitle);
+    }
+
+   public WebElement selectEmployees () {
+   	return driver.findElement( Employees);
+   }
+   
+   
+   public WebElement selectCountry() {
+    	return driver.findElement(Country);
+    }
+
+
+
+
+
+
+}

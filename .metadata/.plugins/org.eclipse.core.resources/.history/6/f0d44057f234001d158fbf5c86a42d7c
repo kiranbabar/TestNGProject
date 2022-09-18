@@ -1,0 +1,15 @@
+package PageObjectModel;
+
+import org.openqa.selenium.By;
+
+public class SignUpPageObjects {
+
+	public void driver;
+
+By Firstname=By.xpath("//input[@type='text']");
+By Lastname=By.xpath("//input[@type='text']");
+By WorkEmail=By.xpath("//input[@type='email']");
+By Company=By.xpath("//input[@name='CompanyName']");
+By Phone=By.xpath("//input[@type='tel']");
+
+}

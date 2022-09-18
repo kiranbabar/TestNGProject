@@ -1,0 +1,50 @@
+package PageObjectModel;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class SignUpPageObjects {
+
+	public WebDriver driver;
+
+	private By Firstname=By.xpath("//input[@type='text']");
+	private By Lastname=By.xpath("//input[@type='text']");
+	private By WorkEmail=By.xpath("//input[@type='email']");
+	private By Company=By.xpath("//input[@name='CompanyName']");
+	private By Phone=By.xpath("//input[@type='tel']");
+    private By JobTitle=By.xpath("//select[@name='UserTitle']");
+
+
+
+    public SignUpPageObjects(WebDriver driver2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public WebElement EnterFirstname() {
+    	return driver.findElement(Firstname);
+    }
+
+    public WebElement EnterLastname() {
+    	return driver.findElement(Lastname);
+    }
+
+    public WebElement EnterWorkEmail() {
+    	return driver.findElement(WorkEmail);
+    }
+
+
+    public WebElement EnterCompany() {
+    	return driver.findElement(Company);
+    }
+
+    public WebElement EnterPhone() {
+    	return driver.findElement(Phone);
+    }
+
+    public WebElement selectJobTitle() {
+    	return driver.findElement(JobTitle);
+    }
+
+
+}

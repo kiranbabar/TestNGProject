@@ -1,0 +1,58 @@
+package selenium1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
+
+public class seleniumbasicscommand {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Win-10\\Desktop\\chrome driver\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+      
+        //To launch url--
+     driver.get("https://www.amazon.com/");
+     driver.manage().window().minimize();
+    // driver.manage().window().maximize();
+     
+    		// To print the url-- print the url which is launched
+            System.out.println(driver.getCurrentUrl());
+            
+            //To print the title of the page
+            System.out.println (driver.getTitle());
+            
+            //To move backward
+    		driver.navigate().back();
+             Thread.sleep(5000); 
+    		
+    		//To move forward
+    		driver.navigate().forward();
+    		
+    		//To refresh the page
+		driver.navigate().refresh();
+		
+		//To maximize the window
+        driver.manage().window().maximize();
+		
+        //to minimize the window
+        driver.manage().window().minimize();
+        
+        
+        driver.close(); //this is closed current opened browser
+		
+		driver.get("https://www.amazon.com/");// invalid session id
+		
+		driver.quit();
+  
+         driver.get("https://www.flipkart.com/");
+        driver.get("https://www.google.com/");
+        
+		
+		
+		
+	
+	}
+	
+}

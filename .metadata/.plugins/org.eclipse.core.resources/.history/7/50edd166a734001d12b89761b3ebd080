@@ -1,0 +1,19 @@
+package PageObjectModel;
+
+import org.openqa.selenium.By;
+
+public class LoginPageObject {
+
+By username=By.xpath("//input[@id='username']");
+
+By password=By.xpath("//input[@id='password']");
+
+By login=By.xpath("")
+
+
+
+
+
+
+
+}

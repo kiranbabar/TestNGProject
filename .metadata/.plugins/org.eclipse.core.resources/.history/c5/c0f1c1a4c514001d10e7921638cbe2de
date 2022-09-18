@@ -1,0 +1,32 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class clear {
+
+	public static void main(String[]args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Win-10\\Desktop\\chrome driver\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+      	
+		driver.get("https://login.salesforce.com/?locale=in");
+	 driver.findElement(By.xpath("//input[@id='username']")).sendKeys("kiran");
+	WebElement a= driver.findElement(By.xpath("//input[@id='username']"));
+	  a.clear();
+	
+	  driver.findElement(By.xpath("//input[@id='username']")).sendKeys("kiran");
+	  
+	  driver.findElement(By.xpath("//input[@name='pwr']")).sendKeys("secure123");
+	  
+	  driver.findElement(By.xpath("//input[@id='Login']")).click();
+	  Thread.sleep(2000);
+	  WebElement b=driver.findElement(By.xpath("//div[@id='error']"));
+		System.out.println(b.getText());
+		
+		
+	}
+	
+	
+	
+}

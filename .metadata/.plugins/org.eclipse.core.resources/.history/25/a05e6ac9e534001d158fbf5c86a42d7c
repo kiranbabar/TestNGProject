@@ -1,0 +1,25 @@
+package Testcases;
+
+import java.io.IOException;
+
+import PageObjectModel.LoginPageObject;
+import Resources.BaseClass;
+
+public class VerifySignupTestCase extends BaseClass {
+
+    public void SignUp() throws IOException {
+    	
+    	browserLaunch();
+    
+    	driver.get("https://login.salesforce.com/?locale=in");
+    
+    	LoginPageObject lpo=new LoginPageObject(driver);
+    	lpo.TryforFree().click();
+    
+    
+    
+    }
+
+
+
+}
